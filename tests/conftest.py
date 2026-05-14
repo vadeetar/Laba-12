@@ -6,8 +6,16 @@ from sqlalchemy.pool import StaticPool
 
 from app.main import app
 from app.database import Base, get_db
-from app.models.user import User
 from app.core.security import get_password_hash
+
+# ВАЖНО: Импортируем ВСЕ модели до вызова create_all(),
+# чтобы SQLAlchemy создал для них таблицы в тестовой базе
+from app.models.user import User
+from app.models.room import Room
+from app.models.guest import Guest
+from app.models.booking import Booking
+from app.models.stay import Stay
+from app.models.cleaning_task import CleaningTask
 
 # Используем in-memory базу данных SQLite для быстрых и чистых тестов
 SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
