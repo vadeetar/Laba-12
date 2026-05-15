@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
-from app.database import get_db
+from app.core.database import get_db
 from app.schemas import BookingCreate, BookingResponse, StayResponse
 from app.services.booking_service import BookingService
 from app.core.dependencies import get_current_active_user

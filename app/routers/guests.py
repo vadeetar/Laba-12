@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from typing import List
-from app.database import get_db
+from app.core.database import get_db
 from app.schemas import GuestCreate, GuestResponse
 from app.services.guest_service import GuestService
 from app.core.dependencies import get_current_active_user

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.database import engine, Base
+from app.core.database import engine, Base
 from app.routers import auth, bookings, guests, cleaning, reports, rooms
 
 # В реальном проекте используется Alembic,

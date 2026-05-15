@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean
-from app.database import Base # Убедись, что путь к Base верный
+from app.core.database import Base # Убедись, что путь к Base верный
 
 class User(Base):
     __tablename__ = "users"

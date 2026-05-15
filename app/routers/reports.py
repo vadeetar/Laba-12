@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import func
-from app.database import get_db
+from app.core.database import get_db
 from app.models.room import Room
 from app.models.booking import Booking
 from app.core.dependencies import get_current_admin
